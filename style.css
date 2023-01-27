@@ -5,14 +5,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 18px;
 }
 body {
+  font-size: 18px;
   background: hsl(0, 0%, 100%);
   position: relative;
 }
 .bg-cta {
-  background: url('images/bg-hero-desktop.svg') hsl(193, 100%, 96%);
+  background: url('images/bg-hero-desktop.svg') hsl(193, 100%, 96%) center;
 }
 .container {
   padding: 0 2rem;
@@ -28,6 +28,7 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 2rem;
+  color: black;
   /* white-space: nowrap; */
 }
 p,
@@ -107,6 +108,7 @@ header {
 .texts {
   padding: 0 2rem;
   width: 50%;
+  color: hsl(208, 11%, 55%);
 }
 .big-build {
   width: 50%;
@@ -140,13 +142,17 @@ header {
 }
 .build-community h1 {
   margin: 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 2rem;
 }
 footer {
+  width: 100%;
   padding-top: 7rem;
   background: hsl(192, 100%, 9%);
   display: flex;
   flex-direction: column;
-  font-size: 10px;
+  font-size: 0.9rem;
   z-index: 1;
   position: absolute;
 }
@@ -178,15 +184,181 @@ footer {
 }
 .icons > span {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.25rem;
   margin-bottom: 8rem;
 }
 .logo-footer {
   margin-left: 4rem;
 }
 .icons {
-  margin: 0 0.5rem 0 0;
+  margin: 0 0.25rem 0 0;
 }
 .flow {
   flex-direction: row-reverse;
+}
+.btn-build {
+  font-size: 16px;
+  padding: 1rem 3.4rem;
+  box-shadow: 0px 4px 11px 7px rgba(0, 0, 0, 0.13);
+}
+/* Media for HUGE screens */
+@media screen and (min-width: 2100px) {
+  body {
+    background: purple;
+  }
+  .big-build {
+    margin-bottom: -6rem;
+  }
+}
+
+/* Media for Tablet screens */
+@media screen and (max-width: 768px) {
+  .cta-left {
+    width: 45%;
+    padding: 0rem 0rem 0rem 0;
+  }
+  .cta-right {
+    width: 55%;
+    padding: 0rem 0rem 0rem 0rem;
+    margin-left: 2rem;
+  }
+  p {
+    padding: 0;
+  }
+  .call-to-action {
+    padding: 0rem 0;
+  }
+  .container {
+    padding: 0 2rem;
+    /* width: 768px; */
+    /* background: red; */
+  }
+  .btn-start {
+    margin: 1rem 0;
+  }
+  header {
+    margin: 2rem 0rem 2rem 0.25rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  .icons {
+    margin: 0;
+  }
+  .icons > span {
+    padding: 0.5rem 0.6rem;
+    margin-bottom: 8rem;
+  }
+
+  .div-1,
+  .div-2,
+  .div-3,
+  .div-4 {
+    /* display: block; */
+    width: 30%;
+    margin: 1rem;
+    /* background: yellowgreen; */
+  }
+  .build-community h1 {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    text-align: center;
+
+    /* * {
+    background: yellow;
+  } */
+  }
+  .build-community {
+    padding: 2rem 0;
+    padding-bottom: 0.75rem;
+  }
+  .btn-build {
+    font-size: 14px;
+    padding: 1rem 2.4rem;
+    box-shadow: 0px 4px 11px 7px rgb(0 0 0 / 13%);
+  }
+  .img-illu {
+    margin: 3rem 0;
+    width: 100%;
+    /* padding: 0 1rem; */
+  }
+}
+/* Media for Mobile screens */
+@media screen and (max-width: 480px) {
+  .bg-cta {
+    background: url('images/bg-hero-mobile.svg') hsl(193, 100%, 96%);
+  }
+  .grow,
+  .call-to-action {
+    /* background: rebeccapurple; */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+  .call-to-action {
+    flex-direction: column;
+  }
+  .big-build {
+    width: 87%;
+  }
+  .img-logo {
+    width: 30%;
+    /* padding: 2rem; */
+  }
+  .try {
+    padding: 0.4rem 1.5rem;
+  }
+  .img-illu {
+    width: 90%;
+  }
+  .cta-right,
+  .cta-left {
+    width: 100%;
+    padding: 0rem 0rem 0rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-left {
+    width: 73%;
+    padding: 0rem 0rem 0rem 0;
+  }
+  h1 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+  p {
+    margin: 1rem 0;
+  }
+  .btn-start {
+    padding: 0.8rem 3.5rem;
+  }
+  .texts {
+    /* padding: 0 2rem; */
+    width: 100%;
+    height: 20%;
+  }
+  .illu {
+    width: 100%;
+  }
+  .big-span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .div-1,
+  .div-2,
+  .div-3,
+  .div-4 {
+    width: 100%;
+    margin: 0;
+  }
+  .logo-footer {
+    margin-left: 0;
+  }
+  * {
+    /* background: blue; */
+  }
 }
